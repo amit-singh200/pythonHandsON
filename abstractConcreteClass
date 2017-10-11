@@ -1,0 +1,17 @@
+#abstract class: can not instantiate the abstract class containg the abrstract methods,
+#but concrete class(derived from the abstract class) can be intantiated as soon the abstract methods are overrided.
+
+from abc import ABCMeta, abstractmethod
+
+class Abstract:
+    __metaclass__ = ABCMeta
+
+    @abstractmethod
+    def foo(self):
+        pass
+
+class Concrete(Abstract):
+	def foo(self):
+		print"hello concrete abstract"
+
+Concrete()
