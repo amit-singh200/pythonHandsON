@@ -1,0 +1,31 @@
+"""
+class A: x = 'a'
+
+class B(A): pass
+
+class C(A): x = 'c'
+
+class D(B, C): pass
+print  D.x #'a',
+print D.__mro__
+
+#o/p:
+#a
+# AttributeError: class D has no attribute '__mro__'
+"""
+
+##New class style
+class A(object): x = 'a'
+
+class B(A): pass
+
+class C(A): x = 'c'
+
+class D(B, C): pass
+
+print D.x
+print D.__mro__#c, order D-b-c-a
+
+#o/p:
+#c
+#(<class 'D'>, <class 'B'>, <class 'C'>, <class 'A'>, <type 'object'>
