@@ -1,0 +1,29 @@
+CONST = "fghjk" ##static const var
+
+
+class Abc:
+  """
+  note: all class members are public and methods are virtual in python
+	below are never loaded and inherited
+	: __name is notation for the private members: super_private
+	: _name is used for semi private methods: semi_private, 
+	can define  a class also starting with _, will not be loaded only internal module class.
+  """
+
+  class_var_count = 0 ##class var or static class var
+
+  def __init__(self, x): ### initiator , __new__() =>constructer
+    self.var = x
+    
+  @classmethod ### maintains info aboubt the class instance generally
+  def counts_the_instances(cls_obj):
+    cls_obj.class_var_count = "fghjk"
+  
+  @staticmethod #### uses the class vars or static vars
+  def uses_some_class_vars(self):
+    class_var_count
+   
+  @abstractmethod ### comes under abstract class
+  def def_in_concrete():
+    pass
+  
