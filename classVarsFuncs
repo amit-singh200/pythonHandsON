@@ -16,11 +16,11 @@ class Abc:
     self.var = x
     
   @classmethod ### maintains info aboubt the class instance generally
-  def counts_the_instances(cls_obj):
+  def counts_the_instances(cls, arg1, agr2, ...): #bound to class not the object of class
     cls_obj.class_var_count = "fghjk"
   
   @staticmethod #### uses the class vars or static vars
-  def uses_some_class_vars(self):
+  def uses_some_class_vars(arg*, kvar*): #put inside class as it belongs but no instance access, note-no self passed.
     class_var_count
    
   @abstractmethod ### comes under abstract class
